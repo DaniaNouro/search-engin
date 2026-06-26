@@ -1,0 +1,393 @@
+{
+  "info": {
+    "_postman_id": "20679982-0861-483c-bbfd-b39827ac82b6",
+    "name": "ir_search",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38866134",
+    "_collection_link": "https://go.postman.co/collection/38866134-20679982-0861-483c-bbfd-b39827ac82b6?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "tf*idf",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8085/search/tfidf?query=Why is the melting point of diamond so much higher than silicon?&top_k=10",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8085",
+          "path": [
+            "search",
+            "tfidf"
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "Why is the melting point of diamond so much higher than silicon?",
+              "type": "text"
+            },
+            {
+              "key": "top_k",
+              "value": "10",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "tf*idf",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8085/search/tfidf?query=Why is the melting point of diamond so much higher than silicon?&top_k=10",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8085",
+              "path": [
+                "search",
+                "tfidf"
+              ],
+              "query": [
+                {
+                  "key": "query",
+                  "value": "Why is the melting point of diamond so much higher than silicon?"
+                },
+                {
+                  "key": "top_k",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "date",
+              "value": "Sat, 13 Jun 2026 19:50:08 GMT"
+            },
+            {
+              "key": "server",
+              "value": "uvicorn"
+            },
+            {
+              "key": "content-length",
+              "value": "988"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"doc_id\": \"100002\",\n        \"score\": 0.758926547647299,\n        \"snippet\": \"What is a diamond's melting point?\"\n    },\n    {\n        \"doc_id\": \"493772\",\n        \"score\": 0.719146089618459,\n        \"snippet\": \"Do diamonds have a melting point? Can you even melt a diamond?\"\n    },\n    {\n        \"doc_id\": \"309366\",\n        \"score\": 0.7067146818316853,\n        \"snippet\": \"Why does diamond have a higher melting point than silica?\"\n    },\n    {\n        \"doc_id\": \"282170\",\n        \"score\": 0.6132221807517242,\n        \"snippet\": \"Is it possible to melt down diamonds?\"\n    },\n    {\n        \"doc_id\": \"88798\",\n        \"score\": 0.5918993934110812,\n        \"snippet\": \"What is melting point?\"\n    },\n    {\n        \"doc_id\": \"526925\",\n        \"score\": 0.5438710618439604,\n        \"snippet\": \"Why does gold have higher melting point than silver?\"\n    },\n    {\n        \"doc_id\": \"145603\",\n        \"score\": 0.48356561900021977,\n        \"snippet\": \"What is the melting point of ice?\"\n    },\n    {\n        \"doc_id\": \"463797\",\n        \"score\": 0.48219247588092295,\n        \"snippet\": \"What does \\\"high melting point\\\" mean?\"\n    },\n    {\n        \"doc_id\": \"250937\",\n        \"score\": 0.4795736079678028,\n        \"snippet\": \"What is the melting point of rocks?\"\n    },\n    {\n        \"doc_id\": \"514759\",\n        \"score\": 0.4749995924245012,\n        \"snippet\": \"What is a diamond?\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "bm25",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8085/search/bm25?query=Why is the melting point of diamond so much higher than silicon?&top_k=10",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8085",
+          "path": [
+            "search",
+            "bm25"
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "Why is the melting point of diamond so much higher than silicon?"
+            },
+            {
+              "key": "top_k",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "bm25",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8085/search/bm25?query=Why is the melting point of diamond so much higher than silicon?&top_k=10",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8085",
+              "path": [
+                "search",
+                "bm25"
+              ],
+              "query": [
+                {
+                  "key": "query",
+                  "value": "Why is the melting point of diamond so much higher than silicon?"
+                },
+                {
+                  "key": "top_k",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "date",
+              "value": "Sat, 13 Jun 2026 22:34:42 GMT"
+            },
+            {
+              "key": "server",
+              "value": "uvicorn"
+            },
+            {
+              "key": "content-length",
+              "value": "1023"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"doc_id\": \"309366\",\n        \"score\": 30.621851652282714,\n        \"snippet\": \"why does diamond have a higher melting point than silica\"\n    },\n    {\n        \"doc_id\": \"493772\",\n        \"score\": 28.60106841397465,\n        \"snippet\": \"do diamonds have a melting point can you even melt a diamond\"\n    },\n    {\n        \"doc_id\": \"100002\",\n        \"score\": 28.135051768379974,\n        \"snippet\": \"what is a diamond s melting point\"\n    },\n    {\n        \"doc_id\": \"526924\",\n        \"score\": 21.974802788657517,\n        \"snippet\": \"why does goold have higher melting point than silver\"\n    },\n    {\n        \"doc_id\": \"526925\",\n        \"score\": 21.974802788657517,\n        \"snippet\": \"why does gold have higher melting point than silver\"\n    },\n    {\n        \"doc_id\": \"282170\",\n        \"score\": 20.654159426620957,\n        \"snippet\": \"is it possible to melt down diamonds\"\n    },\n    {\n        \"doc_id\": \"88798\",\n        \"score\": 19.73030453836396,\n        \"snippet\": \"what is melting point\"\n    },\n    {\n        \"doc_id\": \"343612\",\n        \"score\": 18.847704798694714,\n        \"snippet\": \"why does nacl have a higher melting point than licl kcl or rbcl\"\n    },\n    {\n        \"doc_id\": \"88797\",\n        \"score\": 17.767956760891348,\n        \"snippet\": \"what is the melting point of salt\"\n    },\n    {\n        \"doc_id\": \"137454\",\n        \"score\": 17.767956760891348,\n        \"snippet\": \"spandex melting point\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "evaluate",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"model_name\" : \"bm25\",\r\n    \"limit_queries\":\"200\",\r\n    \"top_k\":\"10\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8085/evaluation/evaluate",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8085",
+          "path": [
+            "evaluation",
+            "evaluate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "bert",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"model_name\" : \"bm25\",\r\n    \"limit_queries\":\"200\",\r\n    \"top_k\":\"10\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8085/search/bert?query=Is it 'normal' to be a virgin at 27?&top_k=10",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8085",
+          "path": [
+            "search",
+            "bert"
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "Is it 'normal' to be a virgin at 27?"
+            },
+            {
+              "key": "top_k",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "hybrid",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8085/search/hybrid?query=Where can I buy special flavor cupcake at Gold Coast?&top_k=10&hybrid_mode=parallel&alpha=0.5&beta=0.5",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8085",
+          "path": [
+            "search",
+            "hybrid"
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "Where can I buy special flavor cupcake at Gold Coast?"
+            },
+            {
+              "key": "top_k",
+              "value": "10"
+            },
+            {
+              "key": "hybrid_mode",
+              "value": "parallel"
+            },
+            {
+              "key": "alpha",
+              "value": "0.5"
+            },
+            {
+              "key": "beta",
+              "value": "0.5"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "hybrid",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8085/search/hybrid?query=Where can I buy special flavor cupcake at Gold Coast?&top_k=10&hybrid_mode=parallel&alpha=0.5&beta=0.5",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8085",
+              "path": [
+                "search",
+                "hybrid"
+              ],
+              "query": [
+                {
+                  "key": "query",
+                  "value": "Where can I buy special flavor cupcake at Gold Coast?"
+                },
+                {
+                  "key": "top_k",
+                  "value": "10"
+                },
+                {
+                  "key": "hybrid_mode",
+                  "value": "parallel",
+                  "description": "serial | parallel"
+                },
+                {
+                  "key": "alpha",
+                  "value": "0.5"
+                },
+                {
+                  "key": "beta",
+                  "value": "0.5"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "date",
+              "value": "Sun, 14 Jun 2026 21:23:32 GMT"
+            },
+            {
+              "key": "server",
+              "value": "uvicorn"
+            },
+            {
+              "key": "content-length",
+              "value": "1236"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [
+            {
+              "expires": "Invalid Date",
+              "domain": "",
+              "path": ""
+            }
+          ],
+          "body": "[\n    {\n        \"doc_id\": \"2574\",\n        \"score\": 0.9792474703660334,\n        \"snippet\": \"where can i get wonderful flavors on cupcakes in gold coast\"\n    },\n    {\n        \"doc_id\": \"88918\",\n        \"score\": 0.9011575438277682,\n        \"snippet\": \"where can i get very nice and original flavor cupcakes in gold coast\"\n    },\n    {\n        \"doc_id\": \"5867\",\n        \"score\": 0.8394510081578508,\n        \"snippet\": \"where can i found different cupcake flavors in gold coast\"\n    },\n    {\n        \"doc_id\": \"371558\",\n        \"score\": 0.6913971511106317,\n        \"snippet\": \"where can i buy freshly baked cupcakes in gold coast\"\n    },\n    {\n        \"doc_id\": \"14272\",\n        \"score\": 0.6755646185200765,\n        \"snippet\": \"where can i buy very incredible and most amazing cupcakes in gold coast\"\n    },\n    {\n        \"doc_id\": \"139063\",\n        \"score\": 0.6487745716846092,\n        \"snippet\": \"where can i get a wide variety of cake and cupcake flavors at gold coast\"\n    },\n    {\n        \"doc_id\": \"571\",\n        \"score\": 0.5934304830717831,\n        \"snippet\": \"where can i find delicious cupcakes at gold coast\"\n    },\n    {\n        \"doc_id\": \"2575\",\n        \"score\": 0.5864068842513877,\n        \"snippet\": \"where can i get good quality cupcakes and a lot of different flavor in gold coast\"\n    },\n    {\n        \"doc_id\": \"570\",\n        \"score\": 0.5661918433048585,\n        \"snippet\": \"where can i buy best quality customized cupcakes in gold coast\"\n    },\n    {\n        \"doc_id\": \"43042\",\n        \"score\": 0.5644736687579753,\n        \"snippet\": \"where can i get best flavors designs and decorations for cupcakes at gold coast\"\n    }\n]"
+        }
+      ]
+    }
+  ]
+}
