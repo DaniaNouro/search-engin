@@ -1,0 +1,10 @@
+{
+  "model": "HYBRID_PARALLEL",
+  "total_queries_used": 10000,
+  "top_k": 10,
+  "MAP": 0.852,
+  "Precision@10": 0.1326,
+  "Recall@10": 0.9508,
+  "nDCG": 0.8889,
+  "Avg_Latency_ms": 2393.92
+}

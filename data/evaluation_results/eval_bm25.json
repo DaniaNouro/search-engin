@@ -1,0 +1,10 @@
+{
+  "model": "BM25",
+  "total_queries_used": 10000,
+  "top_k": 10,
+  "MAP": 0.7612,
+  "Precision@10": 0.1189,
+  "Recall@10": 0.8792,
+  "nDCG": 0.8057,
+  "Avg_Latency_ms": 3561.4014
+}

@@ -1,0 +1,10 @@
+{
+  "model": "TF-IDF",
+  "total_queries_used": 10000,
+  "top_k": 10,
+  "MAP": 0.7321,
+  "Precision@10": 0.1145,
+  "Recall@10": 0.8529,
+  "nDCG": 0.7783,
+  "Avg_Latency_ms": 299.3233
+}

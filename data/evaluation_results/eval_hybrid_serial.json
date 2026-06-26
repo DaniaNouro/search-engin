@@ -1,0 +1,10 @@
+{
+  "model": "HYBRID_SERIAL",
+  "total_queries_used": 10000,
+  "top_k": 10,
+  "MAP": 0.8509,
+  "Precision@10": 0.1316,
+  "Recall@10": 0.9415,
+  "nDCG": 0.8857,
+  "Avg_Latency_ms": 3787.164
+}

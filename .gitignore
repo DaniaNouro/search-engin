@@ -1,0 +1,71 @@
+# ====================================================================
+# PROJECT CORE CONFIGURATION: GIT IGNORE RULES
+# Purpose: Prevents serialization binaries, cached language weights,
+#          local runtime environments, and database secrets from
+#          polluting upstream repository configurations.
+# ====================================================================
+
+# ── 1. HEAVY VECTOR STORES & SERIAlIZATION BINARIES (CRITICAL) ──────
+# These items represent high-density spatial artifacts computed offline.
+# Storing large binaries in source control degrades network pipeline performance.
+data/vector_store/*.bin
+data/vector_store/*.joblib
+temp
+
+
+# Keep the unified data store directories structures tracked without keeping binaries
+!data/vector_store/.gitkeep
+!data/evaluation_results/.gitkeep
+
+
+# ── 2. PYTHON RUNTIME ENVIRONMENT & DEPENDENCY PACKAGES ─────────────
+# Local virtual runtime frames must be independently established per node deployment.
+.venv/
+venv/
+ENV/
+env/
+bin/
+lib/
+include/
+share/
+pyvenv.cfg
+
+
+# ── 3. INTERPRETER RUNTIME COMPILATION & BYTECODE CACHES ────────────
+# Pre-compiled python execution optimizations generated dynamically on local machines.
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+
+# ── 4. CRYPTOGRAPHIC CREDENTIALS & SECURITY ENVIRONMENTS ────────────
+# Strict operational boundaries: Never commit real-world database keys,
+# certificates, or connection parameters to public domains.
+.env
+*.env
+.env.local
+.env.development
+.env.production
+secret_keys/
+*.pem
+*.key
+
+
+# ── 5. INTEGRATED DEVELOPMENT ENVIRONMENT (IDE) CONFIGURATIONS ──────
+# Editor configuration artifacts specific to individual designer nodes (e.g., PyCharm, VS Code).
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+
+# ── 6. OS-SPECIFIC FILES SYSTEM ARTIFACTS ───────────────────────────
+# Temporal files injected by operating system file browsers during execution frames.
+.DS_Store
+Thumbs.db
+desktop.ini

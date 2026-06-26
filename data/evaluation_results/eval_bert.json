@@ -1,0 +1,10 @@
+{
+  "model": "BERT",
+  "total_queries_used": 10000,
+  "top_k": 10,
+  "MAP": 0.8477,
+  "Precision@10": 0.133,
+  "Recall@10": 0.9466,
+  "nDCG": 0.8841,
+  "Avg_Latency_ms": 380.5652
+}
