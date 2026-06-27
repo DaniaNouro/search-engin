@@ -16,6 +16,7 @@ from services.retrieval.tfidf_retriever import search_tfidf
 from services.retrieval.bm25_retriever import search_bm25
 from services.retrieval.bert_retriever import search_bert, _init_bert_cache
 from services.retrieval.hybrid_retriever import search_parallel_hybrid, search_serial_hybrid
+from services.retrieval.multilingual_retriever import search_multilingual
 
 
 def compute_ndcg(hits: list, k: int) -> float:
@@ -96,11 +97,13 @@ def evaluate_model(model_name: str = "TF-IDF", top_k: int = 10, **kwargs) -> dic
     # ── Cold Start Isolation Countermeasure ──
     # Instantiates deep transformers model layers prior to tracking execution loop intervals,
     # preventing disk serialization latency bounds from inflating pure online query metrics.
-    if current_model in ["BERT", "HYBRID_PARALLEL", "HYBRID_SERIAL"]:
+    if current_model in ["BERT", "HYBRID_PARALLEL", "HYBRID_SERIAL", "MULTILINGUAL"]:
         try:
             _init_bert_cache()
+            from services.retrieval.multilingual_retriever import _init_multilingual_cache
+            _init_multilingual_cache()
         except Exception as e:
-            return {"Error": f"Failed to initialize BERT: {str(e)}"}
+            return {"Error": f"Failed to initialize Models Cache: {str(e)}"}
 
     precisions, recalls, aps, ndcgs, latencies = [], [], [], [], []
     total_queries = len(ground_truth)
@@ -124,6 +127,8 @@ def evaluate_model(model_name: str = "TF-IDF", top_k: int = 10, **kwargs) -> dic
             results = search_parallel_hybrid(query_text, top_k=top_k)
         elif current_model == "HYBRID_SERIAL":
             results = search_serial_hybrid(query_text, top_k=top_k)
+        elif current_model == "MULTILINGUAL":
+            results = search_multilingual(query_text, top_k=top_k)
         else:
             results = []
 

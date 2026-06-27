@@ -58,7 +58,6 @@ import pandas as pd
 import json
 import os
 from ui.services.api_client import fetch_evaluation_metrics
-
 st.title("📈 Model Evaluation & Comparison")
 
 # ── helper ──────────────────────────────────────────────────────────────
@@ -80,7 +79,7 @@ if 'comparison_df' not in st.session_state:
 # ── controls ─────────────────────────────────────────────────────────────
 target_model = st.selectbox(
     "Select Model to Evaluate",
-    ["TF-IDF", "BM25", "BERT", "HYBRID_PARALLEL", "HYBRID_SERIAL"]
+    ["TF-IDF", "BM25", "BERT", "HYBRID_PARALLEL", "HYBRID_SERIAL","MULTILINGUAL"]
 )
 
 eval_top_k = st.slider("Top K for Metrics", 5, 20, 10)

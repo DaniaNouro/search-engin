@@ -25,6 +25,8 @@ RESULT_FILES = [
     BASE_DIR / "data/evaluation_results/eval_bm25.json",
     BASE_DIR / "data/evaluation_results/eval_bert.json",
     BASE_DIR / "data/evaluation_results/eval_hybrid_parallel.json",
+    BASE_DIR / "data/evaluation_results/eval_hybrid_serial.json",
+    BASE_DIR / "data/evaluation_results/eval_multilingual.json"
 ]
 
 rows = []

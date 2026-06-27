@@ -1,0 +1,10 @@
+{
+  "model": "MULTILINGUAL",
+  "total_queries_used": 10000,
+  "top_k": 10,
+  "MAP": 0.8201,
+  "Precision@10": 0.1301,
+  "Recall@10": 0.9278,
+  "nDCG": 0.8589,
+  "Avg_Latency_ms": 308.1274
+}
